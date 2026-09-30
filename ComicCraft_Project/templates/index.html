@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ComicCraft - AI Comic Creator</title>
+    <style>
+        body{font-family:Arial;margin:0;background:linear-gradient(135deg,#eef2ff,#fff7ed);min-height:100vh}
+        .box{max-width:800px;margin:50px auto;background:white;padding:35px;border-radius:20px;box-shadow:0 10px 30px #0002}
+        h1{text-align:center}.field{margin:18px 0}label{display:block;font-weight:bold;margin-bottom:7px}
+        input,textarea,select{width:100%;box-sizing:border-box;padding:12px;border:1px solid #ccc;border-radius:10px}
+        textarea{height:120px}.btn{width:100%;padding:14px;border:0;border-radius:10px;background:#111827;color:white;font-size:17px;cursor:pointer}
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1>🎨 ComicCraft</h1>
+    <p style="text-align:center">AI Comic Story Creator using Gemini + Stable Diffusion</p>
+    <form action="/generate" method="post">
+        <div class="field"><label>Story Prompt</label>
+            <textarea name="story_prompt" placeholder="A brave fox exploring an enchanted forest" required></textarea></div>
+        <div class="field"><label>Main Character Name</label>
+            <input name="character_name" placeholder="Foxy" required></div>
+        <div class="field"><label>Setting</label>
+            <select name="setting"><option>Forest</option><option>School</option><option>City</option><option>Space</option></select></div>
+        <div class="field"><label>Story Tone</label>
+            <select name="tone"><option>Funny</option><option>Dramatic</option><option>Light-hearted</option><option>Poetic</option></select></div>
+        <div class="field"><label>Art Style</label>
+            <select name="art_style"><option>Comic book</option><option>Anime</option><option>Pixel art</option><option>Realistic</option></select></div>
+        <button class="btn">✨ Generate Comic</button>
+    </form>
+</div>
+</body>
+</html>
